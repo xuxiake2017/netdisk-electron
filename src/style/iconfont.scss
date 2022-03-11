@@ -1,0 +1,55 @@
+.svg-icon {
+  width: 16px;
+  // height: 16px;
+}
+
+@font-face {
+  font-family: "iconfont"; /* Project id 3178785 */
+  src: url('https://at.alicdn.com/t/font_3178785_6px0s9rs3if.woff2?t=1646035598052') format('woff2'),
+       url('https://at.alicdn.com/t/font_3178785_6px0s9rs3if.woff?t=1646035598052') format('woff'),
+       url('https://at.alicdn.com/t/font_3178785_6px0s9rs3if.ttf?t=1646035598052') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vertical_line:before {
+  content: "\e63a";
+}
+
+.icon-close:before {
+  content: "\e69e";
+}
+
+.icon-youjian:before {
+  content: "\e624";
+}
+
+.icon-liwu:before {
+  content: "\e601";
+}
+
+.icon-shezhi:before {
+  content: "\e8b7";
+}
+
+.icon-games:before {
+  content: "\e67f";
+}
+
+.icon-f-vip:before {
+  content: "\e76b";
+}
+
+.icon-zuidahua_huaban1:before {
+  content: "\e673";
+}
+
+.icon-zuixiaohua:before {
+  content: "\e644";
+}
