@@ -144,8 +144,8 @@ export default defineComponent({
   color: #000000;
   font-weight: 600;
   -webkit-app-region: no-drag;
-  height: 16px;
-  width: 16px;
+  // height: 16px;
+  // width: 16px;
   &+& {
     margin-left: 12px;
   }

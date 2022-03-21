@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div
-      v-for="(item, index) in items"
+      v-for="(item) in items"
       :key="item.label"
       class="item u-flex"
       :class="{
-        'item--select': currentItemIndex === index,
+        'item--select': currentPage === item.name,
       }"
-      @click="onItemClick(index)"
+      @click="onItemClick(item)"
     >
       <CaretRight
         v-if="item.showCaret"
@@ -35,32 +35,43 @@ export default defineComponent({
     CaretRight,
     MoreFilled,
   },
-  setup () {
+  props: {
+    currentPage: String
+  },
+  emits: [
+    'currentPageChange'
+  ],
+  setup (props, context) {
     const currentItemIndex = ref(0)
     const items = [
       {
         label: '我的文件',
         showCaret: true,
         showMore: true,
+        name: 'fileList',
       },
       {
         label: '我的分享',
         showCaret: false,
         showMore: false,
+        name: 'share',
       },
       {
         label: '回收站',
         showCaret: false,
         showMore: false,
+        name: 'recycle',
       },
       {
         label: '快捷访问',
         showCaret: true,
         showMore: false,
+        name: 'quick',
       },
     ]
-    const onItemClick = (index) => {
-      currentItemIndex.value = index
+    const onItemClick = (item) => {
+      // currentItemIndex.value = index
+      context.emit('currentPageChange', item.name)
     }
     return {
       currentItemIndex,
