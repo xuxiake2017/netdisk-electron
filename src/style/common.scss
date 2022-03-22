@@ -76,3 +76,50 @@ body {
 		flex: $i;
 	}
 }
+
+/* start--文本行数限制--start */
+.u-line-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.u-line-2 {
+  -webkit-line-clamp: 2;
+}
+
+.u-line-3 {
+  -webkit-line-clamp: 3;
+}
+
+.u-line-4 {
+  -webkit-line-clamp: 4;
+}
+
+.u-line-5 {
+  -webkit-line-clamp: 5;
+}
+
+.u-line-2,
+.u-line-3,
+.u-line-4,
+.u-line-5 {
+  display: -webkit-box; // 弹性伸缩盒
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical; // 设置伸缩盒子元素排列方式
+}
+/* end--文本行数限制--end */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #0003;
+	border-radius: 10px;
+	transition: all .2s ease-in-out;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}

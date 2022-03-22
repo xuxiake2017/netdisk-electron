@@ -1,5 +1,5 @@
 <template>
-  <div class="u-flex-1 u-flex-col container">
+  <div class="u-flex-col container">
     <ToolBar />
     <Breadcrumbs />
     <FileList />
@@ -26,7 +26,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .container {
   height: calc(100vh - 50px);
-  width: 0;
-  background: #FBFBFB;
+  width: calc(100% - 65px - 160px);
+  overflow: hidden;
+  background: #FFF;
 }
 </style>

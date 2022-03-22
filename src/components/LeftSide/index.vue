@@ -34,7 +34,7 @@
       <User
         class="element-icon"
       />
-      <span>首页</span>
+      <span>好友</span>
     </div>
   </div>
 </template>

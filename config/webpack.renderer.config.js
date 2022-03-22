@@ -19,6 +19,7 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, '../src'),
     },
+    extensions: ['.js', '.ts'],
   },
   module: {
     rules: [
@@ -76,6 +77,10 @@ module.exports = {
         resolve: {
           fullySpecified: false,
         },
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.ts$/,
